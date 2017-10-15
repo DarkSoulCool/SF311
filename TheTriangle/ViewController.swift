@@ -25,18 +25,18 @@ class ViewController: UIViewController {
         var myTriangle2 : Int
         var myTriangle3 : Int
         
-        if(triAngle1.text != "" && triAngle3.text != "" && triAngle2.text != ""){
+        if(triAngle1.text != "" && triAngle3.text != "" && triAngle2.text != "") {
              myTriangle1 = Int(triAngle1.text!)!
              myTriangle2 = Int(triAngle2.text!)!
              myTriangle3 = Int(triAngle3.text!)!
-        }else {
+        } else {
             myTriangle1 = 0
             myTriangle2 = 0
             myTriangle3 = 0
         }
         var match = 0;
         let isInvalid = ((myTriangle1 >= 1 && myTriangle1 <= 200) && (myTriangle2 >= 1 && myTriangle2 <= 200) && (myTriangle3 >= 1 && myTriangle3 <= 200 ))
-        if(isInvalid){
+        if(isInvalid) {
                     if myTriangle1 == myTriangle2 {
                         match = match+1;
                     }
@@ -46,45 +46,42 @@ class ViewController: UIViewController {
                     if myTriangle2 == myTriangle3 {
                          match = match+3;
                     }
-                    if(match == 0){
-                        if((myTriangle1 + myTriangle2) <= myTriangle3){
+                    if(match == 0) {
+                        if((myTriangle1 + myTriangle2) <= myTriangle3) {
                             triAngleOutput.text = "NotATriangle"
-                        }else if((myTriangle2 + myTriangle3) <= myTriangle1){
+                        } else if((myTriangle2 + myTriangle3) <= myTriangle1) {
                             triAngleOutput.text = "NotATriangle"
-                        }else{
+                        } else {
                             triAngleOutput.text = "Scalene"
                         }
                     }
-                    else if(match == 1){
-                        if((myTriangle1 + myTriangle3) <= myTriangle2){
+                    else if(match == 1) {
+                        if((myTriangle1 + myTriangle3) <= myTriangle2) {
                             triAngleOutput.text = "NotATriangle"
-                        }else{
+                        } else {
                             triAngleOutput.text = "Isoscales"
                         }
                     }
-                    else if(match == 2){
-                        if((myTriangle1 + myTriangle3) <= myTriangle2){
+                    else if(match == 2) {
+                        if((myTriangle1 + myTriangle3) <= myTriangle2) {
                             triAngleOutput.text = "NotATriangle"
-                        }else{
+                        } else {
                             triAngleOutput.text = "Isoscales"
                         }
                     }
-                    else if(match == 3){
-                        if((myTriangle2 + myTriangle3) <= myTriangle1){
+                    else if(match == 3) {
+                        if((myTriangle2 + myTriangle3) <= myTriangle1) {
                             triAngleOutput.text = "NotATriangle"
-                        }else{
+                        } else {
                             triAngleOutput.text = "Isoscales"
                         }
-                    }
-                    else{
+                    } else {
                             triAngleOutput.text = "Equilaterals"
                     }
-            }else{
+            } else {
                 triAngleOutput.text = "Please Enter number between 1-200"
             }
         
-   
-    
     }
     override func didReceiveMemoryWarning() {
         
